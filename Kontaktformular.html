@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style/style.css">
+    <script src="https://kit.fontawesome.com/ccff2f2860.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <script src="assets/js/app.js" defer></script>
+
+    <title>GetOut - Kontaktformular</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html"><img id="logo" src="assets/img/getoutlogohvid.png" alt="logo"></a>
+            <p id="navTelefon"><i class="fa-solid fa-phone"></i> + 45 71 74 09 31</p>
+
+            <ul id="navbar">
+                <li><a href="index.html">Forside</a></li>
+                <li><a href="Escape-rooms.html">Escape rooms</a></li>
+                <li><a href="Escape-games.html">Escape games</a></li>
+                <li><a href="Stoerre-grupper.html">Større Grupper</a></li>
+                <li><a href="Vores-historie.html">Vores historie</a></li>
+                <li><a href="Prisoginfo.html">Pris og Info</a></li>
+                <li><a href="Kontaktformular.html" id="currentSite-color">Kontaktformular</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+
+    <section class="MobileNav">
+        <p id="navTelefon">+ 45 71 74 09 31</p>
+        <img src="assets/img/getoutlogohvid.png" alt="GetOutLogo" id="logo">
+
+        <i class="fa-solid fa-bars mobileNavToggle"></i>
+
+        <section class="mobileNavMenuOptions mobileHidden">
+            <ul>
+                <a href="index.html">
+                    <li>Forside</li>
+                </a>
+                <a href="Escape-rooms.html">
+                    <li>Escape Rooms</li>
+                </a>
+                <a href="Escape-games.html">
+                    <li>Escape Games</li>
+                </a>
+                <a href="Vores-historie.html">
+                    <li>Vores historie</li>
+                </a>
+                <a href="Prisoginfo.html">
+                    <li>Pris og Info</li>
+                </a>
+                <a href="Kontaktformular.html">
+                    <li>Kontaktformular</li>
+                </a>
+                <a href="Stoerre-grupper.html">
+                    <li>Større Grupper</li>
+                </a>
+            </ul>
+        </section>
+    </section>
+
+    <main>
+        <img src="assets/img/Ikoner-svg/newlock.svg" alt="Background svg lock"
+            class="kontaktFormularen-svg-lock Ikon-Svg-Filter">
+        <img src="assets/img/Ikoner-svg/Nøgle.svg" alt="Background svg key"
+            class="kontaktFormularen-svg-key Ikon-Svg-Filter">
+
+        <section class="kontaktFormularen">
+            <article class="kontaktFormularen-Article-KontaktStartOfPage">
+                <h2 class="kontaktFormularen-h2">
+                    Kontaktformular
+                </h2>
+
+                <p>
+                    Hvis du ønsker at booke eller har spørgsmål, så giv os et kald på
+                    +45 71 74 09 31, send os en mail til kontakt@getoutnow.dk eller udfyld kontaktformularen.
+                </p>
+
+                <p>
+                    Skriv gerne ønsket tidspunkt, aktivitet og antal personer i beskeden.
+                </p>
+            </article>
+
+            <div class="kontaktFormularen-div">
+                <form action="">
+                    <input type="text" id="formNavn" name="Navn" placeholder="Navn" class="kontaktFormularen-div-Input">
+
+                    <input type="text" id="formEmail" name="E-mail" placeholder="E-mail"
+                        class="kontaktFormularen-div-Input">
+
+                    <input type="text" id="formEmne" name="Emne" placeholder="Emne" class="kontaktFormularen-div-Input">
+
+                    <textarea name="Besked" id="formBesked" placeholder="Besked"
+                        class="kontaktFormularen-div-TextArea"></textarea>
+
+                    <input type="submit" value="Send din besked" class="kontaktFormularen-div-Submit">
+                </form>
+            </div>
+
+        </section>
+
+        <section class="kontaktFormularen-Info">
+            <article class="kontaktFormularen-Info-Abningstider">
+                <h3>
+                    <i class="fa-regular fa-clock"></i> Åbningstider
+                    <!-- Icon hentet fra FontAwesome https://fontawesome.com/icons/clock?f=classic&s=regular -->
+                </h3>
+
+                <p>Vores escape rooms kan bookes kl. 09:00-21:00 ved forud booking.</p>
+
+                <p>Vores telefon er åben:</p>
+
+                <p>Mandag – fredag kl. 09:00 – 20:00</p>
+
+                <p>Lørdag – søndag kl. 09:00 – 17:00</p>
+
+                <p>E-mails og beskeder på online chat og Facebook besvares indenfor 24 timer.</p>
+            </article>
+
+            <article class="kontaktFormularen-Info-Pris">
+                <h3>
+                    <i class="fa-solid fa-dollar-sign"></i> Pris
+                    <!-- Icon hentet fra FontAwesome https://fontawesome.com/icons/dollar-sign?f=classic&s=solid -->
+                </h3>
+
+
+                <p>PR. PERSON</p>
+
+                <p>199 kr.</p>
+
+                <p>Der kan være op til 5 personer pr. rum, er i flere, booker vi flere rum ind til jer.</p>
+
+                <p>Vi tager betaling for min. 4 personer – I kan sagtens være et mindre antal, I betaler blot for min.
+                    4 personer.</p>
+            </article>
+
+            <article class="kontaktFormularen-Info-Adresse">
+                <h3>
+                    <i class="fa-solid fa-map-pin"></i> Adresse
+                    <!-- Icon hentet fra FontAwesome https://fontawesome.com/icons/map-pin?f=classic&s=solid -->
+                </h3>
+
+                <p class="kontaktFormularen-Info-AdresseP">Østerågade 25, 2th 9000 Aalborg</p>
+
+                <img src="assets/img/her-bor-getout-escaperoom-1.jpg" alt="Her bor GetOut"
+                    class="kontaktFormularen-Info-AdresseImg">
+            </article>
+
+        </section>
+
+        <section class="kontaktFormularen-Map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2170.109296192585!2d9.919431812184417!3d57.04966827348157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4649328cfbdca437%3A0xc739430711bfe991!2sGetOut!5e0!3m2!1sda!2sdk!4v1686059168057!5m2!1sda!2sdk"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+
+        <footer>
+            <section class="footerWrapper">
+                <article class="indexFAQ">
+                    <h2>FAQ</h2>
+                    <a href="Prisoginfo.html">
+                        <p>Hvad er vores aflysningspolitik?</p>
+                    </a>
+                    <a href="Prisoginfo.html">
+                        <p>Hvad er vores åbningstider?</p>
+                    </a>
+                    <a href="Prisoginfo.html">
+                        <p>Hvad er vores bookingsvarighed?</p>
+                    </a>
+                    <a href="Prisoginfo.html">
+                        <p>Hvordan fungerer vores gavekort?</p>
+                    </a>
+                </article>
+
+                <article class="indexKontakt">
+                    <h2>Kontakt</h2>
+                    <p>Adresse: Østerågade 25, 2. th, 9000 Aalborg</p>
+                    <p>Telefonnummer: 71 74 09 31 </p>
+                    <p>E-mail: kontakt@getoutnow.dk </p>
+                </article>
+
+                <article class="indexFAQ">
+                    <h2>Navigation</h2>
+                    <section class="indexNavigation">
+                        <article>
+                            <p><a href="index.html">Forside</a></p>
+                            <p><a href="Escape-rooms.html">Escape Rooms</a></p>
+                            <p><a href="Escape-games.html">Escape Games</a></p>
+                            <p><a href="Stoerre-grupper.html">Større Grupper</a></p>
+                        </article>
+
+                        <article>
+                            <p><a href="Vores-historie.html">Vores Historie</a></p>
+                            <p><a href="Prisoginfo.html">Pris og Info</a></p>
+                            <p><a href="Kontaktformular.html">Kontaktformular</a></p>
+                        </article>
+                    </section>
+                </article>
+
+                <img src="assets/img/getoutlogohvid.png" alt="GetOutLogo" id="footerLogo">
+
+            </section>
+
+            <section class="footerBottom">
+                <p><i class="fa-brands fa-facebook"></i> <i class="fa-brands fa-instagram"></i> <i
+                        class="fa-brands fa-linkedin"></i></p>
+            </section>
+
+            <section class="footerBottom">
+                <p>Copyright by GetOut</p>
+            </section>
+        </footer>
+    </main>
+</body>
+
+</html>

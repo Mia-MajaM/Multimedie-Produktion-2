@@ -1,0 +1,1941 @@
+/* Fælles css */
+:root {
+  --backgroundColor: #393939;
+  --mainColor: #4F4551;
+  --mainColor0Opacity: #4f455100;
+  --secondaryColor: #DBB425;
+  --textColor: #ffffff;
+  --IkonFilter: brightness(0) saturate(100%) invert(77%) sepia(54%) saturate(707%) hue-rotate(355deg) brightness(95%) contrast(80%);
+  --cardTextBackgroundColor: #707070;
+  --cardTextBackgroundColor0Opaxity: #70707000;
+  --LocationIconBackgroundColor: #3c3c3c;
+  --inputColor: #505050;
+}
+
+/* Filter bruges her til at ændre farven på svg'en */
+/* (brug denne hjemmeside for at finde filteret ud fra deres farve kode: https://angel-rs.github.io/css-color-filter-generator/ */
+
+
+body {
+  background-color: var(--backgroundColor);
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+li,
+p {
+  font-weight: lighter;
+  max-width: 75ch;
+  color: var(--textColor);
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+p,
+li {
+  line-height: 1.5;
+}
+
+button:hover {
+  background-color: var(--secondaryColor);
+}
+
+/* ------Navbar------ */
+nav {
+  background: linear-gradient(var(--mainColor) 70%, var(--mainColor0Opacity));
+}
+
+
+#logo {
+  height: 34px;
+  width: 95px;
+  float: left;
+  margin-left: 2%;
+  margin-top: 20px;
+}
+
+ul {
+  list-style-type: none;
+  overflow: hidden;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  text-decoration: none;
+  border-radius: 5%;
+  text-align: center;
+  color: var(--textColor);
+  display: block;
+  padding: 30px;
+  font-size: 15px;
+}
+
+li a:hover {
+  color: var(--secondaryColor);
+}
+
+#currentSite-color {
+  color: var(--secondaryColor);
+  font-weight: bold;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.index-video {
+  margin-top: -23px;
+  height: 70vh;
+  overflow: hidden;
+}
+
+video {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+}
+
+#navbar {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+}
+
+#navTelefon {
+  position: absolute;
+  top: 15px;
+  left: 180px;
+}
+
+#navTelefon>p {
+  font-weight: 500;
+}
+
+/* Footer---------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------ */
+
+footer {
+  background-color: var(--mainColor);
+  padding: 50px;
+  padding-top: 0px;
+  padding-bottom: 10px;
+}
+
+.footerWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-content: space-evenly;
+}
+
+.indexFAQ>a {
+  text-decoration: none;
+}
+
+.indexFAQ>a>p:hover {
+  color: var(--secondaryColor);
+}
+
+.indexNavigation {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-evenly;
+}
+
+.indexNavigation>article>p>a:hover {
+  color: var(--secondaryColor);
+}
+
+.indexNavigation>article>p {
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+#footerLogo {
+  display: block;
+  margin: auto;
+  width: 15vw;
+}
+
+.footerBottom {
+  display: flex;
+  justify-content: center;
+}
+
+.footerBottom>p>i {
+  font-size: 3rem;
+  padding: 0.3vw;
+}
+
+.footerBottom>p {
+  margin-bottom: 0;
+}
+
+.indexNavigation>article>p>a {
+  text-decoration: none;
+  color: var(--textColor);
+}
+
+
+
+/* index ************************************************************************/
+
+
+
+.indexGetOut {
+  margin: auto;
+  margin-top: 30px;
+}
+
+.indexGetOut>a {
+  text-decoration: none;
+}
+
+.indexGetOut>p {
+  margin: auto;
+  padding: 10px;
+}
+
+.indexHeader {
+  text-align: center;
+  padding: 15px;
+  margin: auto;
+}
+
+.indexButton {
+  display: block;
+  background-color: var(--mainColor);
+  width: 200px;
+  height: 50px;
+  border-radius: 15px;
+  border: none;
+  color: var(--textColor);
+  margin: 20px auto;
+}
+
+.backgroundGradient {
+  padding: 5%;
+  background: linear-gradient(var(--mainColor0Opacity), var(--mainColor), var(--mainColor), var(--mainColor0Opacity));
+}
+
+.indexEscapeRooms>p {
+  display: block;
+  margin: auto;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+.indexEscapeGames>p {
+  display: block;
+  margin: auto;
+  width: 600px;
+  padding-bottom: 20px;
+}
+
+.Ikon-Svg-Filter {
+  position: absolute;
+  z-index: -1;
+  filter: var(--IkonFilter);
+  opacity: 54%;
+}
+
+.indexEscapeRooms-Svg-Lock {
+  left: 10vw;
+  top: 155vh;
+  width: 200px;
+  height: 200px;
+  transform: rotate(330deg);
+}
+
+.indexEscapeRooms-Svg-key {
+  left: 80vw;
+  top: 155vh;
+  width: 220px;
+  height: 220px;
+  transform: rotate(350deg);
+}
+
+/*Styrer sektionen med billeder*/
+.escapeCards {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.escapeCards>a {
+  text-decoration: none;
+  color: var(--textColor);
+}
+
+
+/*Gør så billedet bliver relativt, så der kan komme tekst på*/
+.escapeCardsImages {
+  position: relative;
+  height: 300px;
+  width: 300px;
+  margin: 25px;
+  z-index: 0;
+}
+
+/*Gør teksten absolut, så den sider ovenpå billedet*/
+.escapeCardsImages>h2 {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  color: var(--textColor);
+  background-color: var(--cardTextBackgroundColor);
+}
+
+/*Indikerer låsene*/
+.escapeLocks {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: var(--secondaryColor);
+}
+
+.EscapeGamesLocationIcon {
+  position: absolute;
+  top: -1.5vh;
+  left: 0.5vw;
+  color: var(--secondaryColor);
+  background-color: var(--LocationIconBackgroundColor);
+  padding: 0.1vh 0.3vw 0.1vh 0.3vw;
+}
+
+.EscapeCardPic {
+  opacity: 1;
+  height: 300px;
+  width: 300px;
+  border-radius: 1px;
+  transition: 0.1s;
+}
+
+.cardsImgTextPosition {
+  opacity: 0;
+  top: 50%;
+  padding-right: 3px;
+}
+
+.cardsImgText:hover .cardsImgTextPosition {
+  opacity: 1;
+}
+
+.cardsImgText:hover .EscapeCardPic {
+  border: solid;
+  border-color: var(--secondaryColor);
+}
+
+.cardsImgTextPosition {
+  transition: 0.1s initial;
+  position: absolute;
+  background-color: var(--secondaryColor);
+  width: 300px;
+  text-align: center;
+}
+
+.indexForskellen {
+  display: block;
+  background: linear-gradient(90deg, var(--mainColor0Opacity), var(--mainColor), var(--mainColor0Opacity));
+  padding-top: 100px;
+  padding-bottom: 100px;
+  margin: auto;
+}
+
+.indexEscapeRooms-Svg-Lock-2 {
+  left: 1vw;
+  top: 350vh;
+  width: 200px;
+  height: 200px;
+  transform: rotate(330deg);
+}
+
+.indexEscapeRooms-Svg-key-2 {
+  left: 85vw;
+  top: 340vh;
+  width: 220px;
+  height: 220px;
+  transform: rotate(290deg);
+}
+
+#indexEscapeGamesIcons {
+  display: flex;
+  text-align: center;
+  width: 300px;
+  margin: auto;
+  justify-content: space-between;
+}
+
+#indexEscapeGamesIcons>p>i {
+  color: var(--secondaryColor);
+}
+
+.indexForskellen>p {
+  padding: 5px;
+  margin: auto;
+  width: 600px;
+}
+
+/* escape rooms and games shared css---------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------- */
+.escapeRooms-One,
+.escapeRooms-Two,
+.escapeRooms-Three,
+.escapeGames-One,
+.escapeGames-Two,
+.escapeGames-Three {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 500px;
+  position: relative;
+}
+
+.escapeGames-Three {
+  margin-bottom: 4vh;
+}
+
+.escapeRoomsAndGames-Img {
+  width: 35vw;
+  height: 50vh;
+  display: block;
+  margin: auto;
+}
+
+.escapeArticle-Js {
+  width: 45vw;
+  display: block;
+  margin: auto;
+}
+
+.escapeInfoBox-Grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.escapeDificulty-Js {
+  grid-column: span 2;
+}
+
+.escapeTitle-Js,
+.escapeDificulty-Js,
+.escapePeople-Js,
+.escapeTime-Js {
+  color: var(--secondaryColor);
+}
+
+/* Escape Rooms css--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------- */
+/* Placere svg bag de andre elemeter og deres placering på siden */
+.escapeRooms-HvadErEtEscapeRoom-Svg-Lock {
+  left: 12vw;
+  top: 20vh;
+  width: 150px;
+  height: 150px;
+  transform: rotate(340deg);
+}
+
+/* Placere svg bag de andre elemeter og deres placering på siden */
+.escapeRooms-HvadErEtEscapeRoom-Svg-Question {
+  left: 70vw;
+  top: 20vh;
+  width: 200px;
+  height: 200px;
+  transform: rotate(20deg);
+}
+
+.escapeRooms-HvadErEtEscapeRoom {
+  margin-left: 30%;
+  margin-right: 30%;
+  height: 40vh;
+}
+
+.escapeRooms-HvadErEtEscapeRoom>article>h2 {
+  text-align: center;
+}
+
+.escapeRooms-Two>.escapeRooms-Img {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.escapeRooms-Two>article {
+  grid-column: 1;
+  grid-row: 1;
+  margin-left: 7vw;
+}
+
+.escapeRooms-One::before {
+  content: "";
+  background-image: url("../assets/img/Korrupt.png");
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.11;
+  z-index: -1;
+}
+
+.escapeRooms-Two::before {
+  content: "";
+  background-image: url("../assets/img/Piraten.jpg");
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.11;
+  z-index: -1;
+}
+
+.escapeRooms-Three::before {
+  content: "";
+  background-image: url("../assets/img/thecabin.jpg");
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.11;
+  z-index: -1;
+}
+
+.escapeRooms-VoresEscapeGames {
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+.escapeRooms-VoresEscapeGames>article>h2 {
+  text-align: center;
+}
+
+/* Escape Games css---------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------- */
+
+/* Placere svg bag de andre elemeter og deres placering på siden */
+.escapeGames-HvadErEscapeGames-Svg-Lock {
+  left: 73vw;
+  top: 15vh;
+  width: 150px;
+  height: 150px;
+  transform: rotate(30deg);
+}
+
+/* Placere svg bag de andre elemeter og deres placering på siden */
+.escapeGames-HvadErEscapeGames-Svg-Question {
+  left: 10vw;
+  top: 15vh;
+  width: 200px;
+  height: 200px;
+  transform: rotate(350deg);
+}
+
+/* Placere svg bag de andre elemeter og deres placering på siden */
+.escapeGames-HvadErEscapeGames-Svg-Key {
+  left: 60vw;
+  top: 30vh;
+  width: 120px;
+  height: 120px;
+  transform: rotate(330deg);
+}
+
+.escapeGames-HvadErEscapeGames {
+  margin-left: 30%;
+  margin-right: 30%;
+  height: 35vh;
+}
+
+.escapeGames-HvadErEscapeGames>article>h2 {
+  text-align: center;
+}
+
+.escapeGames-Mindfall {
+  background-image: url();
+}
+
+.escapeGames-TheGrandHotel {
+  background-image: url();
+}
+
+.escapeGames-Two>img {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.escapeGames-Two>article {
+  margin-left: 7vw;
+}
+
+.escapeGames-One::before {
+  content: "";
+  background-image: url("../assets/img/Boksen.png");
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.11;
+  z-index: -1;
+}
+
+.escapeGames-Two::before {
+  content: "";
+  background-image: url("../assets/img/Mindfall.png");
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.11;
+  z-index: -1;
+}
+
+.escapeGames-Three::before {
+  content: "";
+  background-image: url("../assets/img/grandhotel.jpg");
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.11;
+  z-index: -1;
+}
+
+/* Større Grupper css--------------------------------------------------------
+------------------------------------------------------------------------------------------- */
+.stoerreGrupper_SectionGrid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  padding-top: 10vh;
+}
+
+.stoereGrupper_LockColor {
+  color: var(--secondaryColor);
+}
+
+.stoereGrupper_Images {
+  width: 25vw;
+}
+
+.stoereGrupper_h2_Left {
+  grid-column: 2/span 5;
+  grid-row: 1;
+  color: var(--secondaryColor);
+}
+
+.stoereGrupper_Person_Left {
+  grid-column: 2/span 2;
+  grid-row: 2;
+  color: var(--secondaryColor);
+  margin: 0;
+}
+
+.stoereGrupper_p_left {
+  grid-column: 2/span 5;
+  grid-row: 3;
+}
+
+.stoereGrupper_Image_Right {
+  grid-column: 8/span 4;
+  grid-row: 1/span 4;
+}
+
+.stoereGrupper_KontaktOs_Knap {
+  background-color: var(--mainColor);
+  width: 200px;
+  height: 50px;
+  border-radius: 15px;
+  border: none;
+  color: var(--textColor);
+  margin-top: 10%;
+}
+
+.stoereGrupper_h2_Right {
+  grid-column: 7/span 5;
+  grid-row: 1;
+  color: var(--secondaryColor);
+}
+
+.stoereGrupper_Person_Right {
+  grid-column: 7/span 2;
+  grid-row: 2;
+  color: var(--secondaryColor);
+  margin: 0;
+}
+
+.stoereGrupper_p_Right {
+  grid-column: 7/span 5;
+  grid-row: 3;
+}
+
+.stoereGrupper_Image_Left {
+  grid-column: 2/span 4;
+  grid-row: 1/span 3;
+}
+
+.stoereGrupper_EscapeSamarbejde_Rum {
+  grid-row: 5;
+  grid-column: 1/span 12;
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.stoereGrupper_EscapeSamarbejde_Knap {
+  grid-row: 6;
+  grid-column: 6/span 2;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  margin: auto;
+}
+
+
+#stoerreGrupper_TopGradiant {
+  height: 90%;
+  background-image: linear-gradient(var(--mainColor) 70%, var(--mainColor0Opacity));
+  padding-top: 5vh;
+  margin-top: -23px;
+  padding-bottom: 5vh;
+}
+
+#stoereGrupper_h1 {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+#stoereGrupper_TopText {
+  margin: auto;
+}
+
+#stoereGrupper_Mindfall_Lock {
+  grid-column: 4;
+  grid-row: 2;
+  color: var(--secondaryColor);
+}
+
+#stoereGrupper_Mindfall_Tid {
+  grid-column: 6;
+  grid-row: 2;
+  color: var(--secondaryColor);
+  margin: 0;
+}
+
+#stoereGrupper_Mindfall_knap {
+  grid-column: 4/span 2;
+  grid-row: 4;
+}
+
+#stoereGrupper_Irish_knap {
+  grid-column: 8/span 2;
+  grid-row: 4;
+  margin: auto;
+}
+
+
+
+/* Vores Histore css--------------------------------------------------------
+------------------------------------------------------------------------------------------- */
+.voresHistorie_grid {
+  display: grid;
+}
+
+.voresHistorie_h1 {
+  grid-row: 1;
+  grid-column: 2;
+}
+
+.voresHistorie_Ikoner {
+  height: 125px;
+  color: var(--secondaryColor);
+  /* Filter bruges her til at ændre farven på svg'en */
+  filter: var(--IkonFilter);
+}
+
+#voresHistorie_TopText {
+  grid-column: 2;
+  grid-row: 2;
+  padding-bottom: 100px;
+}
+
+#voresHistorie_TopGradiant {
+  height: 90%;
+  background: linear-gradient(var(--mainColor), var(--mainColor0Opacity));
+  padding-top: 5vh;
+  margin-top: -23px;
+}
+
+#voresHistorie_topImage {
+  grid-column: 1;
+  grid-row: 2;
+  padding-left: 10vw;
+  width: 30vw;
+}
+
+#voresHistorie_HistorieGrid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+#voresHistorie_linje {
+  position: absolute;
+  z-index: -1;
+}
+
+#voresHistorie_HistorieIntroTekst {
+  grid-row: 1;
+  grid-column: 5 / span 4;
+  text-align: center;
+}
+
+#voresHistorie_HistorieIdeen {
+  grid-row: 2;
+  grid-column: 2 / span 4;
+}
+
+#voresHistorie_HistorieIdeenIkon {
+  grid-row: 2;
+  grid-column: 6;
+  rotate: -25deg;
+}
+
+#voresHistorie_HistorieDørenÅbner {
+  grid-row: 3;
+  grid-column: 8 / span 4;
+}
+
+#voresHistorie_HistorieDørenÅbnerIkon {
+  grid-row: 3;
+  grid-column: 7;
+}
+
+#voresHistorie_HistorieRejsenTilSuccess {
+  grid-row: 4;
+  grid-column: 2 / span 4;
+}
+
+#voresHistorie_HistorieRejsenTilSuccessIkon {
+  grid-row: 4;
+  grid-column: 6;
+  margin: auto;
+}
+
+#voresHistorie_HistorieOverdragelsen {
+  grid-row: 5;
+  grid-column: 8 / span 4;
+}
+
+#voresHistorie_HistorieOverdragelsenIkon {
+  grid-row: 5;
+  grid-column: 7;
+  margin: auto;
+  height: 75px;
+  rotate: -15deg;
+}
+
+#voresHistorie_HistorieTakForDig {
+  grid-row: 6;
+  grid-column: 2 / span 4;
+}
+
+#voresHistorie_HistorieTakForDigIkon {
+  grid-row: 6;
+  grid-column: 6;
+  rotate: 15deg;
+}
+
+#voresHistorie_greenBox {
+  margin-top: 150px;
+  height: 300px;
+  background-color: var(--mainColor);
+}
+
+#voresHistorie_greenBox>section>ul {
+  list-style: none;
+  padding: 0;
+}
+
+#voresHistorie_greenBox>section>ul>li {
+  float: none;
+}
+
+#voresHistorie_nuværende {
+  grid-column: 1;
+  margin: auto;
+}
+
+#voresHistorie_nuværendeOgTidligereIkon {
+  height: 200px;
+  fill: var(--secondaryColor);
+  grid-column: 2;
+  margin: auto;
+}
+
+#voresHistorie_tidligere {
+  grid-column: 3;
+  margin: auto;
+}
+
+.voresHistorie-AndreOplevelser {
+  margin-left: 30%;
+  margin-right: 30%;
+  text-align: center;
+}
+
+.voresHistorie-AndreOplevelser>h2 {
+  text-align: center;
+}
+
+/*Pris Og Info*/
+
+/*Første sektion med knap, priser og gavekort*/
+.prisSection1 {
+  display: flex;
+  justify-content: space-between;
+  padding: 100px;
+}
+
+/*Centerer teksten i midten*/
+.prisKontakt {
+  text-align: center;
+}
+
+.prisKontakt>a {
+  text-decoration: none;
+}
+
+/*Første div klasse med priser*/
+.prisOgInfoCards {
+  height: 400px;
+  width: 400px;
+  border-radius: 15px;
+  padding: 15px;
+  background: linear-gradient(var(--cardTextBackgroundColor), var(--cardTextBackgroundColor0Opaxity));
+}
+
+/*Sætter en knap ind*/
+.prisOgInfoCardsButton {
+  display: block;
+  background-color: var(--mainColor);
+  width: 200px;
+  height: 50px;
+  border-radius: 15px;
+  border: none;
+  color: var(--textColor);
+  margin: auto;
+}
+
+.buttonWrapper>a {
+  text-decoration: none;
+}
+
+/*Ændrer kun h2 i første sektion*/
+.prisSection1 h2 {
+  text-align: center;
+  color: var(--secondaryColor);
+}
+
+.Prisoginfo-Svg-Question {
+  left: 10vw;
+  top: 45vh;
+  width: 120px;
+  height: 120px;
+  transform: rotate(310deg);
+}
+
+.Prisoginfo-Svg-Question-2 {
+  left: 28vw;
+  top: 120vh;
+  width: 180px;
+  height: 180px;
+  transform: rotate(20deg);
+}
+
+.Prisoginfo-Svg-Dollar {
+  left: 91vw;
+  top: 40vh;
+  width: 100px;
+  height: 100px;
+  transform: rotate(350deg);
+}
+
+.Prisoginfo-Svg-Lock {
+  left: 83vw;
+  top: 190vh;
+  width: 190px;
+  height: 190px;
+  transform: rotate(330deg);
+}
+
+/*Centrer titlen for afsnittet*/
+.prisGeneralText {
+  text-align: center;
+  color: var(--textColor);
+  max-width: none;
+}
+
+/*Anden sektionen for siden*/
+.prisSection2 {
+  display: flex;
+  padding: 10vh;
+  padding-top: 0;
+}
+
+/*Ændrer alle h2'er i anden sektion*/
+.prisSection2 h2 {
+  color: var(--secondaryColor);
+}
+
+/*Er sektionen for alder*/
+.prisOgInfoOplysningerCards,
+.prisBookingsvarighed {
+  border-color: var(--secondaryColor);
+  border-style: solid;
+  border-width: 1px;
+  padding: 20px;
+  border-radius: 15px;
+  height: 300px;
+  width: 350px;
+  margin: auto;
+}
+
+.prisBookingsvarighed {
+  margin: 0;
+  margin-left: auto;
+}
+
+.prisSection3 {
+  display: flex;
+  padding-top: 0;
+  padding-bottom: 30px;
+}
+
+/*Ændrer alle h2'er i tredje sektion*/
+.prisSection3 h2 {
+  color: var(--secondaryColor);
+}
+
+/*Får sektionen til at stå i flex, så knappen ikke forstyrrer*/
+.flexWrapper {
+  display: flex;
+}
+
+.prisOgInfo_ErhvervOgStørre {
+  height: 300px;
+  width: 300px;
+  padding: 20px;
+  margin: auto;
+}
+
+.prisArrangementer {
+  padding-left: 20px;
+}
+
+.prisErhverv {
+  margin-left: 20px;
+}
+
+
+/* Kontaktformularen css-------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------- */
+
+/* Placere svg bag de andre elemeter og deres placering på siden */
+.kontaktFormularen-svg-lock {
+  left: 72vw;
+  top: 70vh;
+  width: 180px;
+  height: 180px;
+  transform: rotate(30deg);
+}
+
+/* Placere svg bag de andre elemeter og deres placering på siden */
+.kontaktFormularen-svg-key {
+  left: 16vw;
+  top: 30vh;
+  width: 220px;
+  height: 220px;
+  transform: rotate(250deg);
+}
+
+.kontaktFormularen {
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+.kontaktFormularen-h2 {
+  text-align: center;
+}
+
+/* grid for kontaktformularen */
+.kontaktFormularen-div>form {
+  display: grid;
+  grid-template-columns: 100%;
+}
+
+.kontaktFormularen-Article-KontaktStartOfPage {
+  padding-left: 10px;
+}
+
+/* css for kontaktformularen */
+.kontaktFormularen-div-Input,
+textarea {
+  width: 100%;
+  resize: vertical;
+  margin-top: 5%;
+  padding: 10px;
+  background-color: var(--inputColor);
+  color: var(--secondaryColor);
+  border-style: none;
+}
+
+/* højden for besked inputet */
+.kontaktFormularen-div-TextArea {
+  height: 15vh;
+}
+
+/* css for send knappen i kontaktformularen */
+.kontaktFormularen-div-Submit {
+  width: 200px;
+  height: 50px;
+  margin: auto;
+  margin-top: 5%;
+  padding: 5px;
+  background-color: var(--mainColor);
+  color: var(--textColor);
+  border-style: none;
+  border-radius: 15px;
+}
+
+.kontaktFormularen-div-Submit:hover {
+  background-color: var(--secondaryColor);
+}
+
+::placeholder {
+  color: var(--secondaryColor);
+}
+
+/* Ny section - grid*/
+.kontaktFormularen-Info {
+  display: grid;
+  grid-template-columns: 33.3% 33.3% 33.3%;
+  column-gap: 0;
+  justify-content: space-evenly;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 10%;
+}
+
+/* laver borderen mellem columns */
+.kontaktFormularen-Info-Abningstider,
+.kontaktFormularen-Info-Pris {
+  border-right: 1px solid var(--secondaryColor);
+}
+
+.kontaktFormularen-Info-Abningstider,
+.kontaktFormularen-Info-Pris,
+.kontaktFormularen-Info-Adresse {
+  padding: 10px;
+}
+
+.kontaktFormularen-Info>article>h3 {
+  text-align: center;
+}
+
+.kontaktFormularen-Info>article>h3>i {
+  color: var(--secondaryColor);
+}
+
+.kontaktFormularen-Info-AdresseP {
+  text-align: center;
+}
+
+.kontaktFormularen-Info-AdresseImg {
+  width: 80%;
+  object-fit: cover;
+  display: block;
+  margin: auto;
+}
+
+/* skaber space mellem de andre elementer og mappet */
+.kontaktFormularen-Map {
+  padding: 0;
+  margin: 0;
+  margin-top: 5vh;
+}
+
+/* ændre map størrelse */
+.kontaktFormularen-Map>iframe {
+  width: 100%;
+  height: 40vh;
+}
+
+
+
+/*Disse er KUN til mobilversionen.*/
+
+.MobileNav {
+  display: none;
+}
+
+.mobileinfo {
+  display: none;
+}
+
+.mobileAbningstider {
+  display: none;
+}
+
+.mobileAdresse {
+  display: none;
+}
+
+.mobilePris {
+  display: none;
+}
+
+.mobileEscapeButton {
+  display: none;
+}
+
+@media only screen and (max-width: 391px) {
+  body {
+    background-color: #393e46;
+    position: relative;
+    /*Forsiden (INDEX) Mobil Version*/
+  }
+
+  p {
+    font-weight: lighter;
+  }
+
+  h1 {
+    font-weight: bolder;
+  }
+
+  header {
+    display: none;
+  }
+
+  .index-video {
+    display: none;
+  }
+
+  .indexEscapeRooms-Svg-key,
+  .indexEscapeRooms-Svg-Lock {
+    display: none;
+  }
+
+  .indexEscapeRooms-Svg-key-2 {
+    display: none;
+  }
+
+  .indexEscapeRooms-Svg-question {
+    display: none;
+  }
+
+  .indexEscapeRooms-Svg-question2 {
+    display: none;
+  }
+
+  .footerWrapper {
+    display: none;
+  }
+
+  .MobileNav {
+    display: block;
+    background-color: #2f7b49;
+    width: 390px;
+    height: 50px;
+    margin: 0;
+  }
+
+  .MobileNav i {
+    position: absolute;
+    color: white;
+    top: 14px;
+    right: 18px;
+    font-size: 20px;
+  }
+
+  .mobileHidden {
+    display: none;
+  }
+
+  .mobileNavToggle {
+    cursor: pointer;
+  }
+
+  .mobileNavMenuOptions {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: #2f7b49;
+    z-index: 2;
+  }
+
+  .mobileNavMenuOptions>ul>a {
+    display: block;
+  }
+
+  .mobileNavMenuOptions>ul>a>li {
+    padding: 1vh 3vh 1vh 3vh;
+  }
+
+  .mobileNavMenuOptions>ul {
+    list-style: none;
+    padding: 1vw;
+    margin: 1vw;
+  }
+
+  #navTelefon {
+    position: absolute;
+    top: 5px;
+    left: 18px;
+    font-size: 12px;
+  }
+
+  #logo {
+    height: 30px;
+    width: 80px;
+    display: block;
+    margin: auto;
+    float: none;
+    padding-top: 1vh;
+  }
+
+  video {
+    display: none;
+  }
+
+  .indexGetOut {
+    width: 390px;
+    height: auto;
+    background-color: #393e46;
+    margin-top: 0px;
+  }
+
+  .indexGetOut>a {
+    text-decoration: none;
+    background-color: #3c3c3c;
+  }
+
+  /* .indexGetOut p, h1 {
+    width:250px;
+} */
+
+  #footerLogo {
+    display: none;
+  }
+
+  .indexButton {
+    display: none;
+  }
+
+  .indexEscapeRooms {
+    display: block;
+    margin: auto;
+    background-color: #393e46;
+    height: auto;
+    padding-bottom: 2vh;
+  }
+
+  .indexEscapeRooms>a {
+    text-decoration: none;
+  }
+
+  .indexEscapeRooms p {
+    width: 250px;
+  }
+
+  /*Er til alle billeder, skal have ændret navn*/
+  .Cabin {
+    position: block;
+    margin: auto;
+    height: 300px;
+    width: 300px;
+    padding: 20px;
+  }
+
+  /*Er låsene til alle, skal også have ændret navn.*/
+  .indexCabinLock {
+    font-size: 12px;
+    position: absolute;
+    right: 25px;
+    bottom: 20px;
+  }
+
+  .Cabin h2 {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    color: white;
+    background-color: #707070;
+    font-size: 20px;
+  }
+
+  /*Er ID'et til billederne, skal have ændret navn på det rigtige og dette.*/
+  /* #indexCabin {
+
+} */
+
+  .indexEscapeGamesIcon {
+    display: none;
+  }
+
+  .indexEscapeGames {
+    padding: 10px;
+    background-color: #393e46;
+    padding-bottom: 2vh;
+  }
+
+  .indexEscapeGames>a {
+    text-decoration: none;
+  }
+
+  .indexEscapeGames>p {
+    width: 387px;
+    max-width: 370px;
+  }
+
+  .escapeGamesPic {
+    margin: auto;
+  }
+
+  #indexEscapeGamesIcons {
+    display: none;
+  }
+
+  .escapeCards {
+    display: grid;
+    grid-template-columns: 1fr;
+    display: none;
+  }
+
+  .cabin {
+    display: block;
+    margin: auto;
+    width: 250px;
+  }
+
+  .indexForskellen {
+    display: none;
+  }
+
+  footer {
+    padding: 15px;
+    text-align: center;
+  }
+
+  .indexFAQ {
+    display: none;
+  }
+
+  .indexKontakt {
+    padding: 0;
+    font-size: 15px;
+  }
+
+  .indexKontakt h2 {
+    padding: 0;
+    text-align: center;
+    font-weight: bolder;
+  }
+
+  .indexNavigation {
+    display: none;
+  }
+
+  .indexNavigation2 {
+    display: none;
+  }
+
+  .footerBottom {
+    display: none;
+  }
+
+  .indexHeader {
+    font-size: 20px;
+  }
+
+  .footerWrapper {
+    display: block;
+  }
+
+  /*Forsiden (INDEX) Mobil Version SLUT*/
+
+  /*Kontaktformular Mobil Version START*/
+
+  .kontaktFormularen {
+    margin: auto;
+    padding: 20px;
+  }
+
+  /* .kontaktFormularen-Article-KontaktStartOfPage {
+   
+} */
+
+  .kontaktFormularen-div {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  .kontaktFormularen-div-Input {
+    width: 320px;
+    margin: auto;
+    margin-top: 10px;
+    height: 50px;
+  }
+
+  .kontaktFormularen-div-TextArea {
+    width: 320px;
+    margin: auto;
+    margin-top: 10px;
+  }
+
+  .kontaktFormularen-div-Submit {
+    padding: 20px;
+    width: 200px;
+  }
+
+  .kontaktFormularen-info {
+    display: none;
+    width: 300px;
+  }
+
+  .kontaktFormularen-Article-KontaktStartOfPage {
+    padding-left: 0px;
+  }
+
+  .kontaktFormularen-Info-Abningstider {
+    display: none;
+  }
+
+  .kontaktFormularen-Info-Adresse {
+    display: none;
+  }
+
+  .kontaktFormularen-Info-Pris {
+    display: none;
+  }
+
+  /* .kontaktFormularen-Map {
+   
+} */
+
+  .kontaktFormularen-svg-lock,
+  .kontaktFormularen-svg-key {
+    display: none;
+  }
+
+  .mobileInfo {
+    display: block;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .mobilePris {
+    display: block;
+    padding: 20px;
+  }
+
+  .mobileAbningstider {
+    display: block;
+    padding: 20px;
+  }
+
+  .mobileAdresse {
+    display: block;
+    padding: 20px;
+  }
+
+  /*Kontaktformular Mobil Version SLUT*/
+
+  /*Pris og Info Mobil Version START*/
+
+  .prisSection1 {
+    display: block;
+
+    padding: 0;
+    margin: 25px auto;
+  }
+
+  .prisKontakt {
+    display: none;
+  }
+
+  .prisPris {
+    display: block;
+    width: 260px;
+    margin: auto;
+    height: 450px;
+  }
+
+  .prisPris p {
+    margin-bottom: 20px;
+  }
+
+  .prisGavekort {
+    display: block;
+    width: 260px;
+    margin: auto;
+    margin-top: 35px;
+    margin-bottom: 50px;
+    height: 450px;
+  }
+
+  .prisGeneralText {
+    display: block;
+  }
+
+  .prisSection2 {
+    display: block;
+    padding: 0;
+  }
+
+  .prisAlder {
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+  .prisSprog {
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+  .prisAflys {
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+  .prisSection3 {
+    display: block;
+    padding: 0;
+    margin-bottom: 4vh;
+  }
+
+  .prisBookingsvarighed {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    width: 300px;
+    margin: auto;
+  }
+
+  .prisInstruktor {
+    margin: auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    width: 300px;
+  }
+
+  .prisSection4 {
+    display: block;
+    height: 730px;
+  }
+
+  .prisArrangementer {
+    padding-bottom: 0;
+  }
+
+  .prisErhverv {
+    display: block;
+    padding-top: 0;
+  }
+
+  .prisPris .prisButton1 {
+    display: block;
+    width: 200px;
+    margin: auto;
+  }
+
+  .flexWrapper {
+    display: block;
+  }
+
+  .prisGavekort .prisButton1 {
+    display: block;
+    width: 200px;
+    margin: auto;
+  }
+
+  .prisGeneralText {
+    margin: auto;
+  }
+
+  .Prisoginfo-Svg-Dollar,
+  .Prisoginfo-Svg-Question,
+  .Prisoginfo-Svg-Question-2,
+  .Prisoginfo-Svg-Lock {
+    display: none;
+  }
+
+  /*Pris Og Info Mobil Version SLUT*/
+
+  /*Vores Historie Mobil Version START*/
+
+  #voresHistorie_linje {
+    display: none;
+  }
+
+  #voresHistorie_TopGradiant {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: auto;
+  }
+
+  .voresHistorie_grid {
+    display: block;
+  }
+
+  #voresHistorie_TopText {
+    display: block;
+    padding: 10px;
+  }
+
+  #voresHistorie_HistorieGrid {
+    display: block;
+    padding: 10px;
+  }
+
+  #voresHistorie_topImage {
+    display: none;
+  }
+
+  #voresHistorie_HistorieGrid h1 {
+    font-size: 25px;
+    text-align: center;
+    margin: auto;
+    width: 390px;
+  }
+
+  #voresHistorie_HistorieGrid h2 {
+    font-size: 25px;
+  }
+
+  #voresHistorie_HistorieIntroTekst {
+    display: block;
+  }
+
+  .voresHistorie_grid {
+    display: block;
+    padding: 10px;
+  }
+
+  #voresHistorie_HistorieIdeenIkon,
+  #voresHistorie_HistorieDørenÅbnerIkon,
+  #voresHistorie_HistorieOverdragelsenIkon,
+  #voresHistorie_HistorieTakForDigIkon {
+    display: none;
+  }
+
+  .voresHistorie_grid h2 {
+    font-size: 25px;
+  }
+
+  .voresHistorie_Ikoner {
+    display: none;
+  }
+
+  #voresHistorie_greenBox {
+    display: none;
+  }
+
+  .voresHistorie-AndreOplevelser {
+    margin: 0;
+    padding: 10px;
+  }
+
+  .voresHistorie-AndreOplevelser-ButtonGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 2vh;
+    padding-bottom: 3vh;
+  }
+
+  .voresHistorie-AndreOplevelser-ButtonGrid>a {
+    text-decoration: none;
+  }
+
+  /*Vores Histore Mobil Versionen Slut */
+
+  /*Escape Games Mobil Version START */
+
+  .escapeGames-HvadErEscapeGames {
+    margin: 0;
+    padding: 10px;
+  }
+
+  .escapeGames-HvadErEscapeGames h2 {
+    text-align: center;
+  }
+
+  .escapeRooms-HvadErEtEscapeRoom-Svg-Lock,
+  .escapeRooms-HvadErEtEscapeRoom-Svg-Question {
+    display: none;
+  }
+
+  .escapeGames-One,
+  .escapeGames-Two,
+  .escapeGames-Three {
+    margin: 0;
+    padding: 10px;
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .escapeGames-HvadErEscapeGames-Svg-Lock,
+  .escapeGames-HvadErEscapeGames-Svg-Question,
+  .escapeGames-HvadErEscapeGames-Svg-Key {
+    display: none;
+  }
+
+  .escapeGames-One>img {
+    width: 370px;
+    height: 300px;
+  }
+
+  .escapeGames-Two>img {
+    width: 370px;
+    height: 300px;
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .escapeGames-Two>article {
+    margin-left: 0;
+  }
+
+  .escapeGames-Three>img {
+    width: 370px;
+    height: 300px;
+  }
+
+  .escapeInfoBox-Grid {
+    display: flex;
+  }
+
+  .escapeArticle-Js {
+    width: auto;
+  }
+
+  .escapeDificulty-Js {
+    padding: 10px;
+    margin: 0;
+  }
+
+  .escapeTime-Js {
+    padding: 10px;
+    margin: 0;
+  }
+
+  .escapePeople-Js {
+    padding: 10px;
+    margin: 0;
+  }
+
+  .escapeTitle-Js {
+    width: 100%;
+    text-align: center;
+  }
+
+  .escapeGames-VoresEscapeRooms {
+    margin: 0;
+    padding: 10px;
+    background: rgb(47, 126, 74);
+    background: linear-gradient(180deg,
+        rgba(47, 126, 74, 0) 5%,
+        rgba(47, 126, 74, 1) 46%,
+        rgba(47, 126, 74, 0) 98%);
+  }
+
+  .escapeGames-VoresEscapeRooms h2 {
+    text-align: center;
+  }
+
+  .mobileEscapeButton {
+    display: block;
+    background-color: #4b835e;
+    width: 200px;
+    height: 50px;
+    border-radius: 15px;
+    border: none;
+    color: white;
+    margin: auto;
+  }
+
+  /*Her slutter Escape Games SLUT*/
+
+  /*Her starter Escape Rooms START*/
+  .escapeRooms-HvadErEtEscapeRoom {
+    margin: 0;
+    padding: 10px;
+  }
+
+  .escapeRooms-One,
+  .escapeRooms-Two,
+  .escapeRooms-Three {
+    margin: 0;
+    padding: 10px;
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .escapeRooms-One img {
+    width: 370px;
+    height: 300px;
+  }
+
+  .escapeRooms-Two img {
+    width: 370px;
+    height: 300px;
+    grid-column: 1;
+  }
+
+  .escapeRooms-Two>article {
+    grid-row: 2;
+    margin-left: 0;
+  }
+
+  .escapeRooms-Three img {
+    width: 370px;
+    height: 300px;
+  }
+
+  .escapeRooms-VoresEscapeGames {
+    margin: 0;
+    padding: 10px;
+    background: rgb(47, 126, 74);
+    background: linear-gradient(180deg,
+        rgba(47, 126, 74, 0) 5%,
+        rgba(47, 126, 74, 1) 46%,
+        rgba(47, 126, 74, 0) 98%);
+  }
+}
+
+  
